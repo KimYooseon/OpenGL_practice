@@ -14,12 +14,16 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
-    GLfloat xAngle, yAngle, zAngle;
+    void drawPyramid();
+
+    int act;
+    GLsizei lastWidth, lastHeight;
 
 private:
-    void initializeGL();
-    void paintGL();
-    void resizeGL(int w, int h);
+     void initializeGL( );
+     void paintGL( );
+     void resizeGL(int w, int h);
+
 };
 
 #endif // WIDGET_H

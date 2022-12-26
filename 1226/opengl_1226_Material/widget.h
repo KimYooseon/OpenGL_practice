@@ -14,12 +14,18 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+
     GLfloat xAngle, yAngle, zAngle;
+    GLfloat red, green, blue;
+    GLboolean bColorTrack;
 
 private:
-    void initializeGL();
-    void paintGL();
-    void resizeGL(int w, int h);
+     void initializeGL( );
+     void paintGL( );
+     void resizeGL(int w, int h);
+
+protected:
+     void keyPressEvent(QKeyEvent* event);
 };
 
 #endif // WIDGET_H

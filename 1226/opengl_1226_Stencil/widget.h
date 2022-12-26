@@ -14,12 +14,18 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
-    GLfloat xAngle, yAngle, zAngle;
+    GLfloat nx, ny;
+    GLboolean bScissor;
+    GLboolean bStencil;
+    GLboolean bEqual;
 
 private:
-    void initializeGL();
-    void paintGL();
-    void resizeGL(int w, int h);
+     void initializeGL( );
+     void paintGL( );
+     void resizeGL(int w, int h);
+
+protected:
+     void keyPressEvent(QKeyEvent* event);
 };
 
 #endif // WIDGET_H
